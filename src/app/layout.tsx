@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 
-import { Navbar } from "./components/navbar";
-import "./globals.css";
+import { Navbar } from "@/app/components/navbar";
 
-import AppWalletProvider from "./components/AppWalletProvider";
+// Providers are used to wrap the app in Wagmi and ConnectKit
+import AppWalletProvider from "@/app/components/AppWalletProvider";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Blinks Scaffold Solana",

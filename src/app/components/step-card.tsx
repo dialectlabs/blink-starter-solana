@@ -1,5 +1,5 @@
-import { Chip } from "./chip";
-import { ChipProps } from "./chip";
+import { Chip } from "@/app/components/chip";
+import { ChipProps } from "@/app/components/chip";
 
 interface StepCardProps {
   chip: ChipProps;

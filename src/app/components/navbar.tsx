@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
-import { MenuButton } from "./menu-button";
+import { MenuButton } from "@/app/components/menu-button";
 
 const navBarLinks = [
   {
