@@ -4,6 +4,7 @@ import {
   ActionGetResponse,
   ActionPostRequest,
   ActionPostResponse,
+  ActionError,
   ACTIONS_CORS_HEADERS,
   BLOCKCHAIN_IDS,
 } from "@solana/actions";
@@ -24,7 +25,7 @@ const blockchain = BLOCKCHAIN_IDS.devnet;
 const connection = new Connection("https://api.devnet.solana.com");
 
 // Set the donation wallet address
-const donationWallet = "J9RaTBYQ7C8y5ZMfy9zc9Sjnoixik1Bj23wQ26TdTRZt";
+const donationWallet = process.env.DONATION_WALLET_ADDRESS;
 
 // Create headers with CAIP blockchain ID
 const headers = {
@@ -96,6 +97,11 @@ export const GET = async (req: Request) => {
 // POST endpoint handles the actual transaction creation
 export const POST = async (req: Request) => {
   try {
+    // Check if the donation wallet address is set
+    if (!donationWallet) {
+      throw new Error("Please add DONATION_WALLET_ADDRESS to your .env file");
+    }
+
     // Step 1:Extract parameters from the URL
     const url = new URL(req.url);
 
@@ -128,7 +134,17 @@ export const POST = async (req: Request) => {
   } catch (error) {
     // Log and return an error response
     console.error("Error processing request:", error);
-    return new Response(JSON.stringify({ error: "Internal server error" }), {
+
+    // Error message
+    const message =
+      error instanceof Error ? error.message : "Internal server error";
+
+    // Wrap message in an ActionError object so it can be shown in the Blink UI
+    const errorResponse: ActionError = {
+      message,
+    };
+
+    return new Response(JSON.stringify(errorResponse), {
       status: 500,
       headers,
     });
