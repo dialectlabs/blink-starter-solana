@@ -29,16 +29,15 @@ const steps = [
 ];
 
 export default function Home() {
-  // ConnectKit modal
-  const actionApiUrl = "http://localhost:3000/api/actions/donate-sol";
+  const blinkApiUrl = "http://localhost:3000/api/actions/donate-sol";
 
   // Adapter, used to connect to the wallet
   const { adapter } = useBlinkSolanaWalletAdapter(
     "https://api.devnet.solana.com"
   );
 
-  // Action we want to execute in the Blink
-  const { blink, isLoading } = useBlink({ url: actionApiUrl });
+  // Blink we want to execute
+  const { blink, isLoading } = useBlink({ url: blinkApiUrl });
 
   return (
     <main className="grid grid-cols-[2fr_3fr] h-[calc(100vh-64px)]">
