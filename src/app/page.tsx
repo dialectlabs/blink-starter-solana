@@ -1,7 +1,7 @@
 "use client";
 
 import { Blink, useBlink } from "@dialectlabs/blinks";
-import { useActionSolanaWalletAdapter } from "@dialectlabs/blinks/hooks/solana";
+import { useBlinkSolanaWalletAdapter } from "@dialectlabs/blinks/hooks/solana";
 import "@dialectlabs/blinks/index.css";
 
 import { StepCard } from "./components/step-card";
@@ -33,7 +33,7 @@ export default function Home() {
   const actionApiUrl = "http://localhost:3000/api/actions/donate-sol";
 
   // Adapter, used to connect to the wallet
-  const { adapter } = useActionSolanaWalletAdapter(
+  const { adapter } = useBlinkSolanaWalletAdapter(
     "https://api.devnet.solana.com"
   );
 
