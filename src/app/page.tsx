@@ -1,6 +1,6 @@
 "use client";
 
-import { Blink, useAction } from "@dialectlabs/blinks";
+import { Blink, useBlink } from "@dialectlabs/blinks";
 import { useActionSolanaWalletAdapter } from "@dialectlabs/blinks/hooks/solana";
 import "@dialectlabs/blinks/index.css";
 
@@ -38,7 +38,7 @@ export default function Home() {
   );
 
   // Action we want to execute in the Blink
-  const { action, isLoading } = useAction({ url: actionApiUrl });
+  const { blink, isLoading } = useBlink({ url: actionApiUrl });
 
   return (
     <main className="grid grid-cols-[2fr_3fr] h-[calc(100vh-64px)]">
@@ -60,12 +60,12 @@ export default function Home() {
       </div>
 
       <div className=" flex items-center justify-center border border-gray-600 rounded-[10px] m-4">
-        {isLoading || !action ? (
+        {isLoading || !blink ? (
           <span>Loading</span>
         ) : (
           <div className="w-full max-w-lg">
             <Blink
-              action={action}
+              blink={blink}
               adapter={adapter}
               securityLevel="all"
               stylePreset="x-dark"
