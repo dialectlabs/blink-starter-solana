@@ -14,8 +14,8 @@ const steps = [
       text: "Backend",
       icon: "icon-cog",
     },
-    headline: "Blink API",
-    text: "Blinks are headless APIs that return transactions, as well as educational metadata that can be used to render blink UIs. \n\nGet started by editing `/src/app/api/actions/donate-sol/route.ts`",
+    headline: "Stake SOL API",
+    text: "This Blink allows you to stake your SOL tokens with the Solflare validator to earn staking rewards. \n\nThe staking API is configured in `/src/app/api/actions/stake-sol/route.ts`",
   },
   {
     icon: "icon-code",
@@ -23,17 +23,17 @@ const steps = [
       text: "Frontend",
       icon: "icon-code",
     },
-    headline: "Blink UI",
-    text: "Dialect's blinks UI components libraries can be used to render the blink data returned from the blink API backend. \n\nGet started by editing `src/app/page.tsx`",
+    headline: "Staking UI",
+    text: "Choose from preset staking amounts or enter a custom amount to stake. Your SOL will be staked with the Solflare validator and start earning rewards. \n\nThe UI is rendered in `src/app/page.tsx`",
   },
 ];
 
 export default function Home() {
-  const blinkApiUrl = "http://localhost:3000/api/actions/donate-sol";
+  const blinkApiUrl = "http://localhost:3000/api/actions/stake-sol";
 
   // Adapter, used to connect to the wallet
   const { adapter } = useBlinkSolanaWalletAdapter(
-    "https://api.devnet.solana.com"
+    "https://api.mainnet-beta.solana.com"
   );
 
   // Blink we want to execute
@@ -43,10 +43,10 @@ export default function Home() {
     <main className="grid grid-cols-[2fr_3fr] h-[calc(100vh-64px)]">
       <div className="col-span-1 p-8 pr-16 overflow-y-auto">
         <h1 className="text-[40px] mb-3 font-bold leading-[1]">
-          Solana Blinks Starter Template
+          Solana Staking with Solflare
         </h1>
         <h2 className="text-[18px] mb-2">
-          Use this template project to get started developing your blink.
+          Stake your SOL tokens and earn rewards with the Solflare validator.
         </h2>
         {steps.map((step, i) => (
           <StepCard
