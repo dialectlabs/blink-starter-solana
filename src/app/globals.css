@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  --background: #000000;
+  --foreground: #FFD700;
 }
 
 body {
@@ -19,11 +19,56 @@ body {
   }
 }
 
+/* x-dark */
 .blink.x-dark {
-  --blink-button: #ffffff;
-  --blink-button-hover: #999999;
+  --blink-bg-primary: #1a1a1a;
+  --blink-button: #FFD700;
+  --blink-button-disabled: #3d3d3d;
+  --blink-button-hover: #FFC000;
+  --blink-button-success: #FFD7001a;
+  --blink-icon-error: #ff6565;
+  --blink-icon-error-hover: #ff7a7a;
+  --blink-icon-primary: #FFD700;
+  --blink-icon-primary-hover: #FFC000;
+  --blink-icon-warning: #FFB545;
+  --blink-icon-warning-hover: #FFC875;
+  --blink-input-bg: #1a1a1a;
+  --blink-input-stroke: #FFD700;
+  --blink-input-stroke-disabled: #3d3d3d;
+  --blink-input-stroke-error: #ff6565;
+  --blink-input-stroke-hover: #FFC000;
+  --blink-input-stroke-selected: #FFD700;
+  --blink-stroke-error: #ff6565;
+  --blink-stroke-primary: #FFD700;
+  --blink-stroke-secondary: #FFC000;
+  --blink-stroke-warning: #FFB545;
+  --blink-text-brand: #FFD700;
   --blink-text-button: #000000;
-  --blink-stroke-primary: #666666;
-  --blink-text-brand: #ffffff;
-  --blink-shadow-container: 0px 0px 0px 0.1px #666666;
+  --blink-text-button-disabled: #666666;
+  --blink-text-button-success: #FFD700;
+  --blink-text-error: #ff6565;
+  --blink-text-error-hover: #ff7a7a;
+  --blink-text-input: #FFD700;
+  --blink-text-input-disabled: #666666;
+  --blink-text-input-placeholder: #FFC000;
+  --blink-text-link: #FFD700;
+  --blink-text-link-hover: #FFC000;
+  --blink-text-primary: #FFD700;
+  --blink-text-secondary: #FFC000;
+  --blink-text-success: #FFD700;
+  --blink-text-warning: #FFB545;
+  --blink-text-warning-hover: #FFC875;
+  --blink-transparent-error: #aa00001a;
+  --blink-transparent-grey: #FFD7001a;
+  --blink-transparent-warning: #a966001a;
+
+  --blink-border-radius-rounded-lg: 0.25rem;
+  --blink-border-radius-rounded-xl: 0.5rem;
+  --blink-border-radius-rounded-2xl: 1.125rem;
+  --blink-border-radius-rounded-button: 624.9375rem;
+  --blink-border-radius-rounded-input: 624.9375rem;
+
+  /* box-shadow */
+  --blink-shadow-container: 0px 2px 8px 0px rgba(59, 176, 255, 0.22),
+    0px 1px 48px 0px rgba(29, 155, 240, 0.24);
 }

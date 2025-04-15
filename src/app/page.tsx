@@ -1,6 +1,9 @@
 "use client";
 
-import { Blink, useBlink } from "@dialectlabs/blinks";
+import {
+  Blink,
+  useBlink,
+} from "@dialectlabs/blinks";
 import { useBlinkSolanaWalletAdapter } from "@dialectlabs/blinks/hooks/solana";
 import "@dialectlabs/blinks/index.css";
 
@@ -68,6 +71,8 @@ export default function Home() {
               adapter={adapter}
               securityLevel="all"
               stylePreset="x-dark"
+              websiteUrl={"https://solflare.com"}
+              websiteText={"Solflare"}
             />
           </div>
         )}
