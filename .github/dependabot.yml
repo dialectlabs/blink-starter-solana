@@ -9,7 +9,7 @@ updates:
       timezone: "Europe/Berlin"
     open-pull-requests-limit: 3
     reviewers:
-      - "bjoern"
+      - "bjoerndotsol"
     labels:
       - "dependencies"
       - "🔧 Maintenance"
