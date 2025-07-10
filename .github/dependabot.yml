@@ -1,0 +1,31 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Europe/Berlin"
+    open-pull-requests-limit: 3
+    reviewers:
+      - "bjoern"
+    labels:
+      - "dependencies"
+      - "🔧 Maintenance"
+    
+    # Group safe updates together
+    groups:
+      safe-updates:
+        patterns:
+          - "@types/*"
+          - "eslint*"
+          - "prettier"
+        update-types:
+          - "patch"
+          - "minor"
+    
+    # Ignore major updates for now (handle manually)
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]

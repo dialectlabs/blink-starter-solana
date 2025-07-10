@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deps:check": "npm outdated",
+    "deps:audit": "npm audit --audit-level=moderate",
+    "deps:fix": "npm audit fix",
+    "maintenance:test": "npm run lint && npm run build"
   },
   "dependencies": {
     "@dialectlabs/blinks": "^0.22.5",
