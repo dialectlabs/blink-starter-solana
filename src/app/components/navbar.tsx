@@ -23,9 +23,9 @@ const navBarLinks = [
     href: "https://terminal.dial.to",
   },
   {
-    logoName: "logo-globe",
-    text: "Explore blinks",
-    href: "https://dial.to",
+    logoName: "logo-library",
+    text: "Blinks library",
+    href: "https://docs.dialect.to/standard-blinks-library",
   },
 ];
 

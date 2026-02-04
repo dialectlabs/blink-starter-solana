@@ -13,18 +13,25 @@ https://docs.dialect.to/blinks/blinks-provider/build-your-first-blink
 
 ## Prerequisites
 
-- Node.js 18+
+- Node.js 18.18+
 - npm, yarn, pnpm, or bun
 - A wallet with some devnet SOL (if you want to test the blink)
 
 ## Features
 
-- Nextjs React framework
-- Tailwind
-- Blink SDK
+- Next.js 16
+- Tailwind CSS
+- Dialect Blinks SDK
 - Solana Web3.js
 - Dark/Light Mode
-- Solana Wallet Adapter
+
+## Standard Blinks Library
+
+Don't want to build every blink from scratch? The [Standard Blinks Library (SBL)](https://docs.dialect.to/standard-blinks-library) is a collection of pre-built, hosted blinks for Solana's top protocols — Jupiter, Kamino, MarginFi, and more. Embed them directly into your app without writing a single action API.
+
+## Markets & Positions API
+
+The [Markets & Positions API](https://docs.dialect.to/markets) gives you structured access to DeFi market data and user positions across supported protocols — all in a single fetch.
 
 ## Getting Started
 

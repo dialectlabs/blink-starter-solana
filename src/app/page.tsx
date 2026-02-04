@@ -45,9 +45,32 @@ export default function Home() {
         <h1 className="text-[32px] lg:text-[40px] mb-3 font-bold leading-[1]">
           Solana Blinks Starter Template
         </h1>
-        <h2 className="text-[16px] lg:text-[18px] mb-2">
+        <h2 className="text-[16px] lg:text-[18px] mb-4">
           Use this template project to get started developing your blink.
         </h2>
+        <a
+          href="https://docs.dialect.to/standard-blinks-library"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block mb-4 p-4 rounded-xl border border-green-800 bg-green-500/5 hover:bg-green-500/10 transition-colors duration-200 -ml-1"
+        >
+          <div className="flex items-center gap-2 mb-1">
+            <span className="text-[12px] font-semibold tracking-wide uppercase text-[#7FFBAB]">
+              🚀  New · Plug & Play
+            </span>
+          </div>
+          <h3 className="text-[16px] font-bold text-white mb-1">
+            Introducing the Standard Blinks Library (SBL)
+          </h3>
+          <p className="text-[14px] text-[#999999]">
+            Production-ready, hosted blinks for top Solana protocols like
+            Jupiter, Kamino, and MarginFi. Built and maintained by Dialect so
+            you don&apos;t have to. Integrate with a single fetch.
+          </p>
+          <span className="inline-block mt-2 text-[14px] text-[#7FFBAB] font-medium">
+            Learn more →
+          </span>
+        </a>
         {steps.map((step, i) => (
           <StepCard
             key={i}
