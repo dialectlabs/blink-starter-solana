@@ -1,3 +1,6 @@
+> [!WARNING]
+> Dialect is sunsetting its Alerts, Blockchain Links, Markets and Positions products. If you are using these products you will need to find alternative solutions.
+
 # Blink Starter for Solana
 
 Blink scaffold Solana acts as a downloadable and reusable template that utilizes NextJS and Tailwind as the front end framework plus API routes for the backend. It comes with all necessary dependencies and configuration out of the box, so that you can immediately start building.
